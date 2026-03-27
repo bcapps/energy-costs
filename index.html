@@ -22,6 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     >
+    <script
+      type="module"
+      src="https://embed.rewiringamerica.org/state-calculator.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://embed.rewiringamerica.org/rewiring-fonts.css"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -53,15 +62,45 @@
 
           <div class="hero-graphic reveal" aria-hidden="true">
             <div class="arrow-stage">
-              <span class="arrow-line"></span>
-              <span class="arrow-head"></span>
+              <svg class="hero-arrow" viewBox="0 0 640 420" role="presentation">
+                <defs>
+                  <linearGradient id="arrowGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffe28d"></stop>
+                    <stop offset="100%" stop-color="#f8c537"></stop>
+                  </linearGradient>
+                  <filter id="arrowGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#f8c537" flood-opacity="0.28"></feDropShadow>
+                  </filter>
+                  <marker
+                    id="chartArrowHead"
+                    viewBox="0 0 18 18"
+                    refX="10"
+                    refY="9"
+                    markerWidth="7"
+                    markerHeight="7"
+                    orient="auto-start-reverse"
+                  >
+                    <path d="M1 1 L17 9 L1 17 L5 9 Z" fill="url(#arrowGradient)"></path>
+                  </marker>
+                </defs>
+                <polyline
+                  points="84,334 148,286 190,322 252,218 302,274 386,142 446,198 548,82"
+                  fill="none"
+                  stroke="url(#arrowGradient)"
+                  stroke-width="18"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  marker-end="url(#chartArrowHead)"
+                  filter="url(#arrowGlow)"
+                ></polyline>
+              </svg>
               <div class="bill-card bill-card-one">
-                <span>Higher bills</span>
-                <strong>Up again</strong>
+                <span>Monthly bills</span>
+                <strong>Keep climbing</strong>
               </div>
               <div class="bill-card bill-card-two">
-                <span>Better move</span>
-                <strong>Use the programs</strong>
+                <span>Better plan</span>
+                <strong>Cash in the incentives</strong>
               </div>
             </div>
           </div>
@@ -309,33 +348,38 @@
             <p class="eyebrow">Personalized savings calculator</p>
             <h2>Want the fastest way to see what might apply to you?</h2>
             <p>
-              Rewiring America's calculator is a strong next step. We could not
-              confirm a clean public embed for this static site, so this page sends
-              you straight to the official tool.
+              This embedded calculator can help residents estimate which incentives
+              and tax credits may apply to their home. It starts with New Jersey,
+              ZIP code 07090, and homeowner selected.
             </p>
           </div>
 
-          <div class="calculator-card reveal">
-            <div>
-              <h3>Use these starting details</h3>
+          <div class="calculator-card calculator-card-embed reveal">
+            <div class="calculator-intro">
+              <h3>Start here, then compare with the programs above</h3>
               <ul class="feature-list compact">
-                <li>Home type: homeowner</li>
+                <li>State: <strong>New Jersey</strong></li>
                 <li>ZIP code: <strong>07090</strong></li>
-                <li>Electric utility: <strong>PSE&amp;G</strong></li>
-                <li>Gas utility: <strong>Elizabethtown Gas</strong></li>
+                <li>Owner status: <strong>homeowner</strong></li>
+                <li>Use PSE&amp;G and Elizabethtown Gas when the calculator asks for utilities.</li>
               </ul>
             </div>
 
-            <div class="calculator-actions">
-              <a
-                class="button button-primary"
-                href="https://homes.rewiringamerica.org/calculator"
-                target="_blank"
-                rel="noreferrer"
-              >Open the savings calculator</a>
-              <p class="small-note">
-                Keep this page open and compare the calculator's recommendations with
-                the New Jersey programs above.
+            <div class="calculator-embed-shell">
+              <rewiring-america-state-calculator
+                api-key="zpka_515f55c73e2948bfab2aa10ff755e8e9_20ad4b98"
+                state="NJ"
+                zip="07090"
+                owner-status="homeowner"
+              ></rewiring-america-state-calculator>
+              <p class="small-note calculator-fallback">
+                If the embedded calculator does not load, open the official tool at
+                <a
+                  class="text-link"
+                  href="https://homes.rewiringamerica.org/calculator"
+                  target="_blank"
+                  rel="noreferrer"
+                >homes.rewiringamerica.org/calculator</a>.
               </p>
             </div>
           </div>
