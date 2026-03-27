@@ -579,7 +579,25 @@ img {
 
 .calculator-intro {
   display: grid;
-  gap: 1rem;
+  gap: 0.65rem;
+}
+
+.calculator-label {
+  margin: 0;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.calculator-intro h3 {
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+.calculator-intro p:last-child {
+  margin: 0;
 }
 
 .calculator-pair {
@@ -592,6 +610,16 @@ img {
 .calculator-tool-card {
   display: grid;
   gap: 1rem;
+}
+
+.calculator-suite {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+    var(--bg-panel);
+  border: 1px solid rgba(255, 243, 234, 0.08);
+  box-shadow: var(--shadow-strong);
 }
 
 .calculator-embed-shell {
