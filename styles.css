@@ -145,7 +145,8 @@ img {
 .section-heading h2,
 .sponsor-card h2,
 .calculator-card h3,
-.info-panel h3 {
+.info-panel h3,
+.program-copy h3 {
   margin: 0;
   font-family: "Oswald", "Arial Narrow", sans-serif;
   line-height: 0.96;
@@ -473,8 +474,10 @@ img {
   font-size: 0.92rem;
 }
 
-.info-panel h3 {
+.info-panel h3,
+.program-copy h3 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .info-panel .feature-list {
