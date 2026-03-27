@@ -1,6 +1,8 @@
 :root {
   --bg-main: #4d0d12;
   --bg-deep: #28060a;
+  --bg-good-main: #103320;
+  --bg-good-deep: #071b11;
   --bg-panel: rgba(255, 246, 237, 0.06);
   --bg-panel-strong: rgba(255, 246, 237, 0.1);
   --text-main: #fff3ea;
@@ -18,6 +20,7 @@
   --radius-md: 20px;
   --radius-sm: 14px;
   --transition: 220ms ease;
+  --scroll-shift: 0;
 }
 
 * {
@@ -29,13 +32,37 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: "Instrument Sans", "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background: var(--bg-deep);
+  isolation: isolate;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
   background:
     radial-gradient(circle at top left, rgba(255, 133, 91, 0.18), transparent 28%),
     radial-gradient(circle at top right, rgba(248, 197, 55, 0.12), transparent 18%),
     linear-gradient(180deg, #69151b 0%, var(--bg-main) 22%, var(--bg-deep) 100%);
-  color: var(--text-main);
+  opacity: calc(1 - var(--scroll-shift));
+}
+
+body::after {
+  background:
+    radial-gradient(circle at top left, rgba(123, 219, 156, 0.24), transparent 26%),
+    radial-gradient(circle at top right, rgba(184, 240, 135, 0.12), transparent 18%),
+    linear-gradient(180deg, #17442d 0%, var(--bg-good-main) 24%, var(--bg-good-deep) 100%);
+  opacity: var(--scroll-shift);
 }
 
 a {
@@ -48,6 +75,8 @@ img {
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   overflow: clip;
 }
 

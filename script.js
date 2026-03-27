@@ -1,4 +1,5 @@
 const revealItems = document.querySelectorAll(".reveal");
+const firstProgramSection = document.querySelector("#whole-home");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -22,3 +23,17 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+const updateScrollShift = () => {
+  if (!firstProgramSection) {
+    return;
+  }
+
+  const transitionDistance = Math.max(firstProgramSection.offsetTop, 1);
+  const progress = Math.min(window.scrollY / transitionDistance, 1);
+  document.documentElement.style.setProperty("--scroll-shift", progress.toFixed(3));
+};
+
+updateScrollShift();
+window.addEventListener("scroll", updateScrollShift, { passive: true });
+window.addEventListener("resize", updateScrollShift);
