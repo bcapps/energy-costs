@@ -688,6 +688,14 @@ img {
   color: inherit;
 }
 
+.site-disclaimer {
+  margin: 3rem 0 0;
+  color: rgba(195, 198, 182, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(22px);
