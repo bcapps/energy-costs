@@ -274,9 +274,7 @@ img {
   position: relative;
   min-height: 34rem;
   border-radius: var(--radius-lg);
-  background:
-    linear-gradient(150deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
-    radial-gradient(circle at 24% 76%, rgba(127, 212, 159, 0.14), transparent 26%);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
   border: 1px solid rgba(255, 243, 234, 0.08);
   box-shadow: var(--shadow-strong);
   overflow: hidden;
