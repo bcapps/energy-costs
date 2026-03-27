@@ -582,6 +582,18 @@ img {
   gap: 1rem;
 }
 
+.calculator-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.calculator-tool-card {
+  display: grid;
+  gap: 1rem;
+}
+
 .calculator-embed-shell {
   min-width: 0;
   padding: 1rem;
@@ -592,11 +604,25 @@ img {
 
 .calculator-embed-shell rewiring-america-state-calculator {
   display: block;
-  min-height: 42rem;
+  height: 42rem;
+  overflow: auto;
 }
 
 .calculator-fallback {
   margin: 1rem 0 0;
+}
+
+.bill-impact-shell {
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 243, 234, 0.08);
+}
+
+.bill-impact-shell rewiring-america-bill-impact-calculator {
+  display: block;
+  height: 42rem;
+  overflow: auto;
 }
 
 .compact {

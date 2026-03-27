@@ -26,6 +26,10 @@
       type="module"
       src="https://embed.rewiringamerica.org/state-calculator.js"
     ></script>
+    <script
+      type="module"
+      src="https://embed.rewiringamerica.org/bill-impact-calculator.js"
+    ></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -405,42 +409,82 @@
 
         <section class="section calculator-section" id="calculator">
           <div class="section-heading reveal">
-            <p class="eyebrow">Personalized savings calculator</p>
-            <h2>Get green to go green</h2>
+            <p class="eyebrow">Rewiring America tools</p>
+            <h2>Find more incentives and estimate bill impact.</h2>
+            <p>
+              Use these tools side by side to see what rebates and tax credits may
+              apply, then compare how common electric upgrades could affect your
+              monthly energy costs.
+            </p>
           </div>
 
-          <div class="calculator-card calculator-card-embed reveal">
-            <div class="calculator-intro">
-              <h3>See what other incentives might apply to you</h3>
-              <p>
-                Rewiring America's calculator can help you find other rebates, tax
-                credits, and incentive programs that may apply to energy-efficient home projects.
-              </p>
+          <div class="calculator-pair reveal">
+            <div class="calculator-tool-card">
+              <div class="calculator-intro">
+                <h3>See what incentives might apply</h3>
+                <p>
+                  Rewiring America's incentives calculator helps surface rebates,
+                  tax credits, and other programs tied to home energy upgrades.
+                </p>
+              </div>
+
+              <div class="calculator-embed-shell">
+                <rewiring-america-state-calculator
+                  api-key="zpka_515f55c73e2948bfab2aa10ff755e8e9_20ad4b98"
+                  state="NJ"
+                  zip="07090"
+                  owner-status="homeowner"
+                  style="
+                    background: rgb(255 255 255);
+                    border-radius: 18px;
+                    --ra-color-background-button: 16 51 32;
+                    --ra-color-text-button: 243 241 231;
+                    --ra-color-text-link: 16 51 32;
+                  "
+                ></rewiring-america-state-calculator>
+                <p class="small-note calculator-fallback">
+                  If the calculator does not load, open the official tool at
+                  <a
+                    class="text-link"
+                    href="https://homes.rewiringamerica.org/calculator"
+                    target="_blank"
+                    rel="noreferrer"
+                  >homes.rewiringamerica.org/calculator</a>.
+                </p>
+              </div>
             </div>
 
-            <div class="calculator-embed-shell">
-              <rewiring-america-state-calculator
-                api-key="zpka_515f55c73e2948bfab2aa10ff755e8e9_20ad4b98"
-                state="NJ"
-                zip="07090"
-                owner-status="homeowner"
-                style="
-                  background: rgb(255 255 255);
-                  border-radius: 18px;
-                  --ra-color-background-button: 16 51 32;
-                  --ra-color-text-button: 243 241 231;
-                  --ra-color-text-link: 16 51 32;
-                "
-              ></rewiring-america-state-calculator>
-              <p class="small-note calculator-fallback">
-                If the calculator does not load, open the official tool at
-                <a
-                  class="text-link"
-                  href="https://homes.rewiringamerica.org/calculator"
-                  target="_blank"
-                  rel="noreferrer"
-                >homes.rewiringamerica.org/calculator</a>.
-              </p>
+            <div class="calculator-tool-card" id="bill-impact">
+              <div class="calculator-intro">
+                <h3>Estimate bill impact</h3>
+                <p>
+                  The bill impact calculator estimates how electrification projects
+                  could change your monthly energy costs beyond the incentives alone.
+                </p>
+              </div>
+
+              <div class="bill-impact-shell">
+                <rewiring-america-bill-impact-calculator
+                  api-key="zpka_515f55c73e2948bfab2aa10ff755e8e9_20ad4b98"
+                  style="
+                    background: rgb(255 255 255);
+                    border-radius: 18px;
+                    --ra-color-background-button: 16 51 32;
+                    --ra-color-text-button: 243 241 231;
+                    --ra-color-text-link: 16 51 32;
+                  "
+                ></rewiring-america-bill-impact-calculator>
+                <p class="small-note calculator-fallback">
+                  If the bill impact calculator does not load, you can still explore
+                  Rewiring America's tools at
+                  <a
+                    class="text-link"
+                    href="https://www.rewiringamerica.org/tools"
+                    target="_blank"
+                    rel="noreferrer"
+                  >rewiringamerica.org/tools</a>.
+                </p>
+              </div>
             </div>
           </div>
         </section>
