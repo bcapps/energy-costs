@@ -530,16 +530,13 @@ img {
   min-width: 0;
   padding: 1rem;
   border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 243, 234, 0.08);
 }
 
 .calculator-embed-shell rewiring-america-state-calculator {
   display: block;
   min-height: 42rem;
-  --ra-color-background-button: 248 197 55;
-  --ra-color-text-button: 43 24 0;
-  --ra-color-text-link: 255 243 234;
 }
 
 .calculator-fallback {
