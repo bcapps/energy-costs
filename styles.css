@@ -619,6 +619,20 @@ img {
   text-decoration: none;
 }
 
+.sponsor-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1.6rem;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 248, 239, 0.96), rgba(242, 238, 225, 0.92));
+  border: 1px solid rgba(255, 243, 234, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 18px 42px rgba(4, 18, 10, 0.18);
+}
+
 .sponsor-title-link {
   color: inherit;
 }
