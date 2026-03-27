@@ -323,6 +323,20 @@ img {
   margin: 1rem 0 0;
 }
 
+.section-badge {
+  display: inline-flex;
+  margin: 0 0 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(248, 197, 55, 0.16);
+  border: 1px solid rgba(248, 197, 55, 0.28);
+  color: #ffe7a1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .program-section {
   padding-top: 0.5rem;
 }
@@ -410,6 +424,17 @@ img {
 .warmth .stat-card strong,
 .warmth .text-link {
   color: #ffe2a3;
+}
+
+.solar-section .featured {
+  background:
+    linear-gradient(135deg, rgba(184, 240, 135, 0.2), rgba(158, 214, 255, 0.08)),
+    rgba(255, 255, 255, 0.04);
+}
+
+.solar-section .stat-card strong,
+.solar-section .text-link {
+  color: #d7f4a5;
 }
 
 .cool-tech .program-copy,
@@ -556,6 +581,15 @@ img {
 .sponsor-logo {
   width: min(100%, 24rem);
   filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.22));
+}
+
+.sponsor-logo-link,
+.sponsor-title-link {
+  text-decoration: none;
+}
+
+.sponsor-title-link {
+  color: inherit;
 }
 
 .reveal {
