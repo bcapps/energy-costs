@@ -453,6 +453,10 @@ img {
   gap: 0.9rem;
 }
 
+.appliance-section .link-row {
+  margin-top: 1.5rem;
+}
+
 .rebate-chip {
   padding: 1.15rem;
   background:
