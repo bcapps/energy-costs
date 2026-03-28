@@ -2,6 +2,36 @@ const revealItems = document.querySelectorAll(".reveal");
 const firstProgramSection = document.querySelector("#whole-home");
 const solarSwitchButtons = document.querySelectorAll("[data-solar-target]");
 const solarPanels = document.querySelectorAll("[data-solar-panel]");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+const hexToRgb = (hex) => {
+  const normalized = hex.replace("#", "");
+  const value = Number.parseInt(normalized, 16);
+
+  return {
+    r: (value >> 16) & 255,
+    g: (value >> 8) & 255,
+    b: value & 255,
+  };
+};
+
+const rgbToHex = ({ r, g, b }) =>
+  `#${[r, g, b]
+    .map((channel) => Math.round(channel).toString(16).padStart(2, "0"))
+    .join("")}`;
+
+const mixColor = (startHex, endHex, progress) => {
+  const start = hexToRgb(startHex);
+  const end = hexToRgb(endHex);
+  const mixChannel = (startChannel, endChannel) =>
+    startChannel + (endChannel - startChannel) * progress;
+
+  return rgbToHex({
+    r: mixChannel(start.r, end.r),
+    g: mixChannel(start.g, end.g),
+    b: mixChannel(start.b, end.b),
+  });
+};
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
@@ -34,6 +64,10 @@ const updateScrollShift = () => {
   const transitionDistance = Math.max(firstProgramSection.offsetTop, 1);
   const progress = Math.min(window.scrollY / transitionDistance, 1);
   document.documentElement.style.setProperty("--scroll-shift", progress.toFixed(3));
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", mixColor("#69151b", "#17442d", progress));
+  }
 };
 
 updateScrollShift();
