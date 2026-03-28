@@ -790,6 +790,10 @@ img {
     padding-bottom: 4rem;
   }
 
+  .calculator-pair {
+    grid-template-columns: 1fr;
+  }
+
   .topbar {
     align-items: flex-start;
     flex-direction: column;
