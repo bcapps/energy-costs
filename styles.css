@@ -459,6 +459,57 @@ img {
     rgba(255, 255, 255, 0.04);
 }
 
+.solar-toggle {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.solar-switch {
+  display: inline-flex;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  width: fit-content;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow-strong);
+}
+
+.solar-switch-button {
+  min-height: 3rem;
+  padding: 0.75rem 1.15rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.solar-switch-button:hover,
+.solar-switch-button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.solar-switch-button:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+}
+
+.solar-switch-button.is-active {
+  background: var(--accent-gold);
+  color: #2b1800;
+}
+
+.solar-panel[hidden] {
+  display: none;
+}
+
 .solar-section .stat-card strong,
 .solar-section .text-link {
   color: #d7f4a5;
@@ -750,6 +801,11 @@ img {
 
   .section-heading h2 {
     font-size: clamp(2.4rem, 12vw, 3.4rem);
+  }
+
+  .solar-switch {
+    display: grid;
+    width: 100%;
   }
 
   .stat-stack,

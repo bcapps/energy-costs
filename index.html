@@ -237,56 +237,153 @@
 
         <section class="section program-section solar-section" id="community-solar">
           <div class="section-heading reveal">
-            <p class="eyebrow">Community solar</p>
-            <h2>Save on electric costs without the hassle.</h2>
+            <p class="eyebrow">Solar savings</p>
+            <h2>Harness the sun to save on electric costs two different ways.</h2>
             <p>
-              Westfield residents can join the community solar program and get
-              the benefits of renewable energy without installing equipment at
-              home.
+              Community solar is the easy no-install option. Rooftop solar can
+              unlock bigger lifetime savings if your roof is a good fit.
             </p>
           </div>
 
-          <div class="program-layout">
-            <div class="stat-stack reveal">
-              <article class="stat-card featured">
-                <span class="stat-label">Monthly savings</span>
-                <strong>20-25%</strong>
-                <p>Off your electricity supply costs.</p>
-              </article>
-              <article class="stat-card">
-                <span class="stat-label">No installation</span>
-                <strong>$0 upfront</strong>
-                <p>No solar panels on your roof and no equipment to install.</p>
-              </article>
-              <article class="stat-card">
-                <span class="stat-label">Flexible</span>
-                <strong>Cancel anytime</strong>
-                <p>No long-term commitment and no penalty to leave the program.</p>
-              </article>
+          <div class="solar-toggle reveal">
+            <div class="solar-switch" role="tablist" aria-label="Compare solar options">
+              <button
+                class="solar-switch-button is-active"
+                type="button"
+                role="tab"
+                id="solar-tab-community"
+                aria-selected="true"
+                aria-controls="solar-panel-community"
+                data-solar-target="community"
+              >Community solar</button>
+              <button
+                class="solar-switch-button"
+                type="button"
+                role="tab"
+                id="solar-tab-rooftop"
+                aria-selected="false"
+                aria-controls="solar-panel-rooftop"
+                data-solar-target="rooftop"
+              >Rooftop solar</button>
             </div>
 
-            <div class="program-copy reveal">
-              <h3>The details</h3>
-              <ul class="feature-list">
-                <li>Open to Westfield residents whether you rent or own your home. Other towns may qualify as well, <a href="https://solarlandscape.com/nj/">check here</a> to see.</li>
-                <li>Your utility provider stays the same and solar credits are applied to your bill.</li>
-                <li>High demand means that it can take months to enter the program, so sign up soon.</li>
-                <li>Westfield residents can sign up with Solar Landscape using invite code <strong>WFIELD</strong>.</li>
-              </ul>
+            <div class="solar-panels">
+              <div
+                class="solar-panel"
+                id="solar-panel-community"
+                role="tabpanel"
+                aria-labelledby="solar-tab-community"
+                data-solar-panel="community"
+              >
+                <div class="program-layout">
+                  <div class="stat-stack">
+                    <article class="stat-card featured">
+                      <span class="stat-label">Monthly savings</span>
+                      <strong>20-25%</strong>
+                      <p>Off your electricity supply costs.</p>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">No installation</span>
+                      <strong>$0 upfront</strong>
+                      <p>No solar panels on your roof and no equipment to install.</p>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Flexible</span>
+                      <strong>Cancel anytime</strong>
+                      <p>No long-term commitment and no penalty to leave the program.</p>
+                    </article>
+                  </div>
 
-              <div class="link-row">
-                <a
-                  class="button button-primary"
-                  href="https://solarlandscape.com/nj/westfield"
-                  target="_blank"
-                  rel="noreferrer"
-                >Sign up with Solar Landscape</a>
-                <a
-                  class="button button-secondary"
-                  href="https://www.westfieldnj.gov/933/Community-Solar"
-                  target="_blank"
-                  rel="noreferrer"
-                >See more details from Westfield</a>
+                  <div class="program-copy">
+                    <h3>The details</h3>
+                    <ul class="feature-list">
+                      <li>Open to Westfield residents whether you rent or own your home. Other towns may qualify as well, <a href="https://solarlandscape.com/nj/">check here</a> to see.</li>
+                      <li>Your utility provider stays the same and solar credits are applied to your bill.</li>
+                      <li>High demand means that it can take months to enter the program, so sign up soon.</li>
+                      <li>Westfield residents can sign up with Solar Landscape using invite code <strong>WFIELD</strong>.</li>
+                    </ul>
+
+                    <div class="link-row">
+                      <a
+                        class="button button-primary"
+                        href="https://solarlandscape.com/nj/westfield"
+                        target="_blank"
+                        rel="noreferrer"
+                      >Sign up with Solar Landscape</a>
+                      <a
+                        class="button button-secondary"
+                        href="https://www.westfieldnj.gov/933/Community-Solar"
+                        target="_blank"
+                        rel="noreferrer"
+                      >See more details from Westfield</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="solar-panel"
+                id="solar-panel-rooftop"
+                role="tabpanel"
+                aria-labelledby="solar-tab-rooftop"
+                data-solar-panel="rooftop"
+                hidden
+              >
+                <div class="program-layout">
+                  <div class="stat-stack">
+                    <article class="stat-card featured">
+                      <span class="stat-label">25-year savings</span>
+                      <strong>$89,146</strong>
+                      <p>Estimated average savings over 25 years from EnergySage.</p>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">Typical payback</span>
+                      <strong>7.5 years</strong>
+                      <p>Average break-even estimate for Westfield from EnergySage.</p>
+                    </article>
+                    <article class="stat-card">
+                      <span class="stat-label">System life</span>
+                      <strong>25-30 years</strong>
+                      <p>Long enough for decades of bill protection after the system pays for itself.</p>
+                    </article>
+                  </div>
+
+                  <div class="program-copy">
+                    <h3>How it works</h3>
+                    <ul class="feature-list">
+                      <li>PSE&amp;G net metering turns extra daytime production into bill credits.</li>
+                      <li>New Jersey's production incentives add value beyond just lowering your own usage.</li>
+                      <li>If you own your home and expect to stay a while, rooftop solar can turn a volatile electric bill into a more predictable long-term cost.</li>
+                    </ul>
+
+                    <div class="link-row">
+                      <a
+                        class="button button-primary"
+                        href="https://sunroof.withgoogle.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >Check your roof with Google Project Sunroof</a>
+                      <a
+                        class="button button-secondary"
+                        href="https://www.energysage.com/solar/calculator/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >Estimate savings with EnergySage</a>
+                      <a
+                        class="button button-ghost"
+                        href="https://nj.pseg.com/saveenergyandmoney/solarandrenewableenergy/netmetering"
+                        target="_blank"
+                        rel="noreferrer"
+                      >See PSE&amp;G net metering details</a>
+                      <a
+                        class="text-link"
+                        href="https://www.westfieldnj.gov/911/Alternative-Energy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >See Westfield's local solar guidance</a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
