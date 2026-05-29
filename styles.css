@@ -804,8 +804,7 @@ img {
   }
 
   .topbar {
-    align-items: flex-start;
-    flex-direction: column;
+    display: none;
   }
 
   .hero h1 {
