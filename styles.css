@@ -66,16 +66,16 @@ body::after {
 
 body::before {
   background:
-    radial-gradient(circle at top left, rgba(255, 133, 91, 0.18), transparent 28%),
-    radial-gradient(circle at top right, rgba(248, 197, 55, 0.12), transparent 18%),
+    radial-gradient(circle at top left, rgb(255 133 91 / calc(var(--scroll-shift) * 18%)), transparent 28%),
+    radial-gradient(circle at top right, rgb(248 197 55 / calc(var(--scroll-shift) * 12%)), transparent 18%),
     linear-gradient(180deg, var(--bg-top-warm) 0%, var(--bg-main) 22%, var(--bg-deep) 100%);
   opacity: calc(1 - var(--scroll-shift));
 }
 
 body::after {
   background:
-    radial-gradient(circle at top left, rgba(123, 219, 156, 0.24), transparent 26%),
-    radial-gradient(circle at top right, rgba(184, 240, 135, 0.12), transparent 18%),
+    radial-gradient(circle at top left, rgb(123 219 156 / calc(var(--scroll-shift) * 24%)), transparent 26%),
+    radial-gradient(circle at top right, rgb(184 240 135 / calc(var(--scroll-shift) * 12%)), transparent 18%),
     linear-gradient(180deg, var(--bg-top-cool) 0%, var(--bg-good-main) 24%, var(--bg-good-deep) 100%);
   opacity: var(--scroll-shift);
 }
