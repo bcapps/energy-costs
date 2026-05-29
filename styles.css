@@ -3,6 +3,7 @@
   --bg-main: #4d0d12;
   --bg-deep: #28060a;
   --bg-top-cool: #17442d;
+  --bg-shell-cool: #071b11;
   --bg-good-main: #103320;
   --bg-good-deep: #071b11;
   --bg-panel: rgba(255, 246, 237, 0.06);
@@ -32,7 +33,7 @@
   --shell-bg: color-mix(
     in srgb,
     var(--bg-top-warm) calc((1 - var(--scroll-shift)) * 100%),
-    var(--bg-top-cool) calc(var(--scroll-shift) * 100%)
+    var(--bg-shell-cool) calc(var(--scroll-shift) * 100%)
   );
 }
 
